@@ -1,19 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView01"
+        android:layout_width="411dp"
+        android:layout_height="69dp"
+        android:background="#B6AEAE"
+        android:paddingTop="30dp"
+        android:text="Calculadora simples"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textView02"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="100dp"
+        android:text="Valor 1:"
+        android:textAlignment="textStart"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText01"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="189dp"
+        android:paddingStart="5dp"
+        android:background="#C7BDBD"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textView03"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="281dp"
+        android:layout_marginStart="100dp"
+        android:text="Valor 2:"
+        android:textAlignment="textStart"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText02"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
+        android:paddingStart="5dp"
+        android:background="#C7BDBD"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/button01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignTop="@+id/editText02"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:onClick="clickButtonAdd"
+        android:text="+"
+        android:textSize="20dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText02"
+        android:layout_marginLeft="222dp"
+        android:layout_marginTop="100dp"
+        android:onClick="clickButtonMinus"
+        android:text="-"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText02"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:onClick="clickButtonMult"
+        android:text="*"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText02"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="200dp"
+        android:onClick="clickButtonDiv"
+        android:text="/"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/button03"
+        android:layout_marginTop="100dp"
+        android:text="O Resultado é:"
+        android:textAlignment="textStart"
+        android:textSize="24sp" />
+
+</RelativeLayout>
